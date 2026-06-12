@@ -13,7 +13,7 @@ Este robo realiza a extracao diaria de relatorios massivos de auditoria (com vol
 * Pipeline de Dados Preciso: O script realiza o calculo dinamico do periodo da semana atual (segunda a sexta) para aplicar os filtros corretos, garantindo consistencia na extracao de dados historicos.
 * Orquestracao e Atualizacao: Configurado para rodar localmente via Agendador de Tarefas do Windows de forma coordenada, disponibilizando os arquivos tratados em rede minutos antes da atualizacao automatica programada nos servidores do Power BI Service.
 
-### Tecnologias Utilizadas
+### Ferramentas Utilizadas
 * Python 3 (Linguagem base)
 * PyAutoGUI (RPA para manipulacao de interface grafica, cliques em coordenadas especificas e preenchimento de formularios)
 * OS e Shutil (Tratamento do sistema operacional para derrubar instancias de programas em segundo plano e movimentar arquivos pesados na rede)
@@ -29,7 +29,7 @@ Este script foi desenvolvido para automatizar a comunicacao interna e auditoria 
 * Comunicacao em Escala: O robo varre uma lista dinamica de contatos e executa o fluxo completo (abertura do software, busca pelo usuario, digitacao e envio da mensagem) de forma agil e sem falhas humanas.
 * Execucao Agendada: Orquestrado para rodar toda sexta-feira em horarios estrategicos de final de turno atraves do Windows Task Scheduler.
 
-### Tecnologias Utilizadas
+### Ferramentas Utilizadas
 * Python 3 (Linguagem base)
 * PyAutoGUI (Manipulacao de teclas do sistema operacional, simulacao de digitacao humana e atalhos de teclado)
 * Time (Gerenciamento de filas de espera para sincronizar a velocidade do script com a resposta de carregamento do software cliente)
