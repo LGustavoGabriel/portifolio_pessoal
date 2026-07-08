@@ -1,0 +1,42 @@
+Este projeto contempla o desenvolvimento de uma infraestrutura de dados analítica completa (Pipeline ETL/ELT) baseada na Arquitetura Medalhão, simulando o fluxo de dados real de um sistema de CRM comercial. O objetivo é transformar dados brutos de prospecção em insights estratégicos de performance e funil de vendas, deixando as estruturas prontas para consumo executivo.
+
+ Arquitetura e Engenharia de Dados
+O projeto foi desenhado utilizando conceitos modernos de Data Lakehouse na nuvem, dividindo a jornada do dado em três camadas fundamentais:
+
+🥉 Camada Bronze (Dados Brutos): Onde os dados extraídos chegam em seu estado original. O script Python gera a volumetria e simula o comportamento do CRM, injetando o dado cru diretamente na tabela de staging.
+
+🥈 Camada Silver (Higienização e Padronização): Camada focada na qualidade do dado (o "T" do ETL). Aqui, consultas SQL removem duplicidades, tratam valores nulos, padronizam textos em caixa alta e convertem formatos de data para garantir a integridade.
+
+🥇 Camada Gold (Regras de Negócio e Entrega): Camada final de consumo. Os dados são modelados pensando na performance do Power BI. As queries SQL já entregam métricas de pipeline e faturamento pré-calculadas e agregadas por vendedor e período cronológico.
+
+ Tecnologias e Ferramentas
+Linguagem de Programação: Python (Bibliotecas: pandas, faker para geração probabilística de regras de negócio).
+
+Data Lakehouse / Nuvem: Google Cloud Platform (GCP) & Google BigQuery.
+
+Transformação de Dados: SQL (BigQuery Standard SQL) utilizando boas práticas de idempotência.
+
+Visualização de Dados: Power BI (Modelagem Star Schema, fórmulas DAX avançadas para conversão e design moderno).
+
+📂 Estrutura de Arquivos do Repositório
+ingestao_crm_bronze.py: Script de automação que gera 500 leads comerciais realistas com distribuição de pesos estatísticos para as fases do funil e faz a carga segura na nuvem via service account.
+
+Camada_prata: Código SQL responsável pela limpeza, padronização e tipagem dos dados brutos.
+
+Camada_Ouro: Código SQL de modelagem de negócio que gera as visões analíticas finais (Performance de Vendedores e Visão Geral do Funil).
+
+Principais Indicadores Gerados (Métricas de Negócio)
+Win Rate (Taxa de Conversão): Eficiência de fechamento de contratos (Ganhos vs. Oportunidades Totais).
+
+Pipeline / Valor em Negociação: Volume financeiro retido nas fases iniciais e intermediárias do funil.
+
+Faturamento Consolidado: Total financeiro convertido com sucesso em receita real.
+
+Ranking de Performance: Análise comparativa da eficiência individual e coletiva do time comercial.
+
+Competências Demonstradas ao Mercado
+Domínio de Pipelines de Dados: Capacidade de orquestrar dados desde a origem (Python) até o destino analítico final (SQL + BI).
+
+Boas Práticas de Cloud: Gerenciamento de credenciais seguras, conexão via SDK oficial do Google e otimização de consultas em bancos analíticos.
+
+Orientação a Resultados: Visão analítica focada em gerar valor e inteligência para tomadores de decisão comerciais.
