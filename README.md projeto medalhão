@@ -42,3 +42,16 @@ Boas Práticas de Cloud: Gerenciamento de credenciais seguras, conexão via SDK 
 Orientação a Resultados: Visão analítica focada em gerar valor e inteligência para tomadores de decisão comerciais.
 
 ##  Próximos Passos: Insights e Análise de Negócio
+
+### 🐍 Exemplo de Ingestão de Dados (Python)
+Abaixo está o trecho do código utilizado para conectar e estruturar a carga inicial na camada Bronze:
+
+```python
+import pandas as pd
+
+def carregar_dados_bronze(caminho_arquivo):
+    # Simulando a carga inicial do pipeline de dados
+    df_bruto = pd.read_csv(caminho_arquivo)
+    print(f"Total de linhas carregadas na Bronze: {len(df_bruto)}")
+    return df_bruto
+```
