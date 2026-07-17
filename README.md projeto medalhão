@@ -54,4 +54,3 @@ def carregar_dados_bronze(caminho_arquivo):
     df_bruto = pd.read_csv(caminho_arquivo)
     print(f"Total de linhas carregadas na Bronze: {len(df_bruto)}")
     return df_bruto
-```
